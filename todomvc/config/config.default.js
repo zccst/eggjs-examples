@@ -20,6 +20,7 @@ module.exports = appInfo => {
     'responseTime',
   ];
 
+  // Nunjucks 实现了在后台服务器显示内容的模板。
   config.view = {
     defaultViewEngine: 'nunjucks',
     mapping: {
@@ -28,6 +29,8 @@ module.exports = appInfo => {
     },
   };
 
+  // object relation map 映射
+  // database 对应着一个文件todos.sqlite3
   config.orm = {
     dialect: 'sqlite',
     client: 'sqlite3',
